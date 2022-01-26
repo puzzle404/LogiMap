@@ -1,17 +1,18 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');">
   <div class="h1-center">
-    <h1>Esta es la Home de los Trucks</h1>
+    <h1> <strong>Find your drive and ship</strong></h1>
+    <p>Explore the world's largest truck sharing marketplace</p>
   </div>
 </div>
 <div class="container text-center mt-5">
-<%= link_to  "Trucks list", trucks_path, class: "btn btn-primary"%>
+<%= link_to  "Explore our Trucks List", trucks_path, class: "btn btn-primary"%>
 </div>
 
-<div class="container text-center mt-5">
-<h2>Últimos camiones publicados</h2>
+<div class="container text-center mt-4">
+<h3>Our Most Recent Trucks</h3>
 </div>
 
-<div class="card-group justify-content-center ">
+<div class="card-group justify-content-center mt-4 ">
 <%# Esta es la card  %>
   <% @toptrucks.each do |truck| %>
     <%= link_to truck do %>
