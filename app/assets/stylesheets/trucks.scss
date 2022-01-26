@@ -1,14 +1,15 @@
 .grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 19px;
-
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ grid-gap: 19px;
 }
-.border-rounded1 {
+
+.card1 {
   border-radius: 8px;
   background-color: white;
   box-shadow: 0px 10px 10px rgba($color: #000000, $alpha: 0.1);
 }
+
 .fotocamion {
   box-sizing: content-box;
   height: 80px;
@@ -23,6 +24,26 @@
     object-fit: cover;
     position: absolute;
     width: 100%;
+}
+
+.banner {
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  height: 600px;
+  align-items: center;
+  justify-content: center
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center
 }
 
 // .border-rounded1 {
@@ -46,14 +67,7 @@
   width: 100%;
 }
 
-.banner h1 {
-  margin: 0;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
-  font-weight: bold;
-  text-align: center
-}
+
 
 a {
   text-decoration: none;
@@ -64,7 +78,7 @@ a:hover {
   color: black;
 }
 
-.border-rounded1:hover {
+.card1:hover {
   opacity: 85%;
   transform: scale(1.03)
 }
