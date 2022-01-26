@@ -9,10 +9,41 @@
   background-color: white;
   box-shadow: 0px 10px 10px rgba($color: #000000, $alpha: 0.1);
 }
-.banner {
-  background-size: cover;
-  background-position: center;
-  padding: 150px 0;
+.fotocamion {
+  box-sizing: content-box;
+  height: 80px;
+  padding-bottom: 35%;
+  position: relative;
+  width: 100%;
+}
+
+.truckpic {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+}
+
+// .border-rounded1 {
+
+// }
+
+
+.card-image {
+  box-sizing: content-box;
+  height: 100%;
+  padding-bottom: 35%;
+  position: relative;
+  width: 100%;
+}
+
+.card-image-inside {
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
 }
 
 .banner h1 {
@@ -23,6 +54,7 @@
   font-weight: bold;
   text-align: center
 }
+
 a {
   text-decoration: none;
   color: black;

@@ -1,4 +1,7 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @truck.photo.key, height: 300, crop: :fit %>');">
+<div class="fotocamion">
+<img src="<%= cl_image_path @truck.photo.key, crop: :fit, :quality=>70 %>" alt="truck-pic" class="truckpic">
+</div>
+
   <div class="container">
     <h1><strong><%= @truck.brand %></strong></h1>
   </div>
