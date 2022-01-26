@@ -1,9 +1,13 @@
+<div class="contaienr">
+<h1>Update your Truck</h1>
+</div>
+
 <div class="container mt-5">
 <h2>Nuevo Camión</h2>
 <%= simple_form_for(@truck) do |f| %>
         <%= f.input :brand, value: @truck.brand %>
-        <%= f.input :model, placeholder:'Enter the model of the truck' %>
-        <%= f.input :description, placeholder:'Enter a truck description' %>
+        <%= f.input :model, value: @truck.model %>
+        <%= f.input :description, value: @truck.description %>
         <%= f.input :capacity, placeholder:'Enter the capacity of the truck' %>
         <%= f.input :price, placeholder:'Enter the price per day of the truck' %>
         <%= f.input :photo, as: :file %>

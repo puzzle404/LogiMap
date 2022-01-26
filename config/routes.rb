@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   resources :trucks, only: [:index, :show, :new, :create, :edit, :update] do
     resources :rents, only: %i[new create]
   end
+  resources :trucks, only: %i[destroy], as: 'delete_truck'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
