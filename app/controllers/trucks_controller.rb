@@ -22,6 +22,19 @@ class TrucksController < ApplicationController
     end
   end
 
+  def destroy
+    @truck = Truck.find(params[:id])
+    @truck.destroy
+    redirect_to root_path
+  end
+
+  def edit
+    @truck = Truck.find(params[:id])
+  end
+
+  def update
+  end
+
   private
 
   def truck_params

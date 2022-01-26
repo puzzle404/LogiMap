@@ -4,6 +4,13 @@
   </div>
 </div>
 
+  <div class="boton mt-4">
+    <%= link_to "Rent Truck",  new_truck_rent_path(@truck), class: "btn btn-primary" %>
+  </div>
+   <div class="boton mt-4">
+    <%= link_to "Delete", delete_truck_path(@truck), method: :delete, data: {confirm: 'Are you sure?'}, class:"delete btn btn-danger" %>
+  </div>
+
   <div class="card1 mb-4 mt-3 container col-8" style = "width: 600px">
           <div class="card-body " >
           <%# Este es el titulo de la película  %>
@@ -15,5 +22,3 @@
             <p class="card-text">$ <%= @truck.price %></p>
           </div>
   </div>
-
-  <%= link_to "Rent Truck",  new_truck_rent_path(@truck), class: "btn btn-primary" %>
