@@ -1,0 +1,17 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://acortar.link/vrNJu5');">
+  <div class="container">
+    <h1><strong><%= @truck.brand %></strong></h1>
+  </div>
+</div>
+<div>
+  <div class="border-rounded1 mb-4 mt-3 container col-8" style = "width: 600px">
+          <div class="card-body " >
+          <%# Este es el titulo de la película  %>
+            <h5 class="card-title"> <strong><%= @truck.brand %></strong></h5>
+            <%# Este es el overview de la película  %>
+            <p class="card-text"><%= @truck.model %></p>
+            <p class="card-text"><%= @truck.description %></p>
+            <p class="card-text"><%= @truck.capacity %> kg</p>
+            <p class="card-text">$ <%= @truck.price %></p>
+          </div>
+  </div>
