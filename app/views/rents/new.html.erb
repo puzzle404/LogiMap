@@ -1,0 +1,13 @@
+<div class="container mt-4 mb-4">
+<h2>Complete your rent</h2>
+</div>
+
+<div class="container">
+<%= simple_form_for [@truck, @rent] do |f| %>
+      <%= f.input :start_date, placeholder:'Select pickup date' %>
+      <%= f.input :end_date, placeholder:'Select dropout date' %>
+      <div class="btn btn-primary">
+      <%= f.button :submit  %>
+      </div>
+<% end %>
+</div>
