@@ -1,13 +1,10 @@
-<div class="fotocamion">
-<img src="<%= cl_image_path @truck.photo.key, crop: :fit, :quality=>70 %>" alt="truck-pic" class="truckpic">
-</div>
-
-  <div class="container">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @truck.photo.key, crop: :fit, :quality=>70 %>');">
+  <div class="h1-center">
     <h1><strong><%= @truck.brand %></strong></h1>
   </div>
 </div>
-<div>
-  <div class="border-rounded1 mb-4 mt-3 container col-8" style = "width: 600px">
+
+  <div class="card1 mb-4 mt-3 container col-8" style = "width: 600px">
           <div class="card-body " >
           <%# Este es el titulo de la película  %>
             <h5 class="card-title"> <strong><%= @truck.brand %></strong></h5>

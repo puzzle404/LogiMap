@@ -1,3 +1,29 @@
-<h1>Esta es la Home de los Trucks</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');">
+  <div class="h1-center">
+    <h1>Esta es la Home de los Trucks</h1>
+  </div>
+</div>
+<div class="container text-center mt-5">
+<%= link_to  "Trucks list", trucks_path, class: "btn btn-primary"%>
+</div>
 
-<%= link_to  "Trucks list", trucks_path, class: "btn btn-primary"  %>
+<div class="container text-center mt-5">
+<h2>Últimos camiones publicados</h2>
+</div>
+
+<div class="card-group justify-content-center ">
+<%# Esta es la card  %>
+  <% @toptrucks.each do |truck| %>
+    <%= link_to truck do %>
+      <div class="border-rounded1 card1 mb-4">
+         <img src="" alt=""> <%= cl_image_tag truck.photo.key, height: 300, width: 400, crop: :fill, :quality=>70 %>
+          <div class="card-body">
+          <%# Este es el titulo de la película  %>
+            <h5 class="card-title"> <strong><%= truck.brand %></strong></h5>
+            <%# Este es el overview de la película  %>
+            <p class="card-text"><%= truck.model %></p>
+          </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
