@@ -5,7 +5,7 @@
   <% @trucks.each do |truck| %>
     <%= link_to truck do %>
       <div class="border-rounded1 mb-4">
-          <img  src="https://acortar.link/vrNJu5" class="card-img-top p-3" alt="truck-image">
+          <%= cl_image_tag truck.photo.key, height: 300, width: 400, crop: :fill %>
           <div class="card-body">
           <%# Este es el titulo de la película  %>
             <h5 class="card-title"> <strong><%= truck.brand %></strong></h5>

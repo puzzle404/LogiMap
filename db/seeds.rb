@@ -8,7 +8,6 @@ Truck.destroy_all
 
 
 # Truck.create(brand: "Mercedez", model: 1992, description: "klasdñasd", capacity: 55555, price: 1995)
-
 20.times do
   Truck.create(
     user: User.last,
