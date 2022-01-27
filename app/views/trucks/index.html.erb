@@ -7,12 +7,14 @@
 
 
 
-<div class="card-group mt-4">
+<div class="card-group mt-4 container">
 <%# Esta es la card  %>
   <% @trucks.each do |truck| %>
     <%= link_to truck do %>
       <div class="card1 mb-4">
-         <%= cl_image_tag truck.photo.key, height: 200, width: 350, crop: :fill, :quality=>70 %>
+        <div class="div-img">
+          <%= cl_image_tag truck.photo.key, height: 250, width: 350, crop: :fill, :quality=>70 %>
+        </div>
           <div class="card-body">
           <%# Este es el titulo de la película  %>
             <h5 class="card-title"> <strong><%= truck.brand %></strong></h5>

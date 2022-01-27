@@ -9,7 +9,7 @@
 </div>
 
 <div class="container text-center mt-4">
-<h3>Our Most Recent Trucks</h3>
+<h3> <strong>Our Most Recent Trucks</strong></h3>
 </div>
 
 <div class="card-group justify-content-center mt-4 ">
@@ -17,7 +17,7 @@
   <% @toptrucks.each do |truck| %>
     <%= link_to truck do %>
       <div class="border-rounded1 card1 mb-4">
-         <img src="" alt=""> <%= cl_image_tag truck.photo.key, height: 300, width: 400, crop: :fill, :quality=>70 %>
+         <%= cl_image_tag truck.photo.key, height: 300, width: 400, crop: :fill, :quality=>70 %>
           <div class="card-body">
           <%# Este es el titulo de la película  %>
             <h5 class="card-title"> <strong><%= truck.brand %></strong></h5>
