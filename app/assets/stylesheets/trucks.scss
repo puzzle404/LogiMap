@@ -44,7 +44,7 @@
 .banner h1 {
   margin: 0;
   color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
   text-align: center;
@@ -75,19 +75,25 @@ a {
   text-decoration: none;
   color: black;
 }
-a:hover {
-  text-decoration: none;
-  color: black;
+
+.a-links a {
+  color: blue;
 }
+
+.a-links a:hover {
+  text-decoration-line: underline;
+  color: blue;
+}
+
 
 .card1:hover {
   opacity: 85%;
-  transform: scale(1.03)
+  transform: scale(1.05)
 }
 
 .h1-center h1 {
   color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
   font-size: 56px;
   font-weight: bold;
 }
@@ -97,7 +103,7 @@ a:hover {
   font-size: 20px;
   color: white;
   opacity: .9;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
   text-align: center;
 }
 
@@ -119,7 +125,7 @@ a:hover {
 
 .trucks-banner-text h1 {
   color: black;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
   font-size: 56px;
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
@@ -130,12 +136,21 @@ a:hover {
   font-size: 20px;
   color: black;
   opacity: .9;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
   text-align: center;
 }
 
 .btn {
   color: white;
+  border-radius: 10px;
+}
+
+.btn-1 a {
+  color: white;
+  display: block;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .botones-rentupdate {
@@ -149,4 +164,14 @@ a:hover {
 
 .navbar-brand {
   size: 300px;
+}
+
+.releases {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+#container-password {
+  background-color: white;
+  padding: 40px;
 }
