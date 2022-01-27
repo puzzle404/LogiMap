@@ -5,7 +5,7 @@
 </div>
 
   <div class="boton mt-4 botones-rentupdate">
-  <% if @truck.user != current_user || current_user.admin == true %>
+  <% if @truck.user != current_user %>
     <%= link_to "Rent Truck",  new_truck_rent_path(@truck), class: "btn btn-primary" %>
     <% end %>
       <% if policy(@truck).update? %>
