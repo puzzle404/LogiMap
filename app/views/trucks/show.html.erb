@@ -11,17 +11,19 @@
     <% end %>
   </div>
 
-  <div class="card1 mb-4 mt-3 container col-8" style = "width: 600px">
-    <div class="card-body " >
-      <h5 class="card-title"> <strong><%= @truck.brand %></strong></h5>
-      <p class="card-text"><%= @truck.model %></p>
-      <p class="card-text"><%= @truck.description %></p>
-      <p class="card-text"><%= @truck.capacity %> kg</p>
-      <p class="card-text">$ <%= @truck.price %></p>
-      <div class="delete">
-      <% if policy(@truck).destroy? %>
-        <%= link_to "Delete", delete_truck_path(@truck), method: :delete, data: {confirm: 'Are you sure?'}, class:"delete btn btn-danger" %>
-      <% end %>
-      </div>
-    </div>
+
+
+  <div class="card1 mb-4 mt-3 container text-center" style = "width: 400px">
+          <div class="card-body " >
+
+            <h3 class="card-title"> <strong><%= @truck.brand %></strong></h3>
+
+            <p class="card-text">Year: <%= @truck.model %></p>
+            <p class="card-text">Description: <%= @truck.description %></p>
+            <p class="card-text">Capacity: <%= @truck.capacity %> kg</p>
+            <p class="card-text">Daily Price: $<%= @truck.price %></p>
+            <div class="delete">
+            <%= link_to "Delete", delete_truck_path(@truck), method: :delete, data: {confirm: 'Are you sure?'}, class:"delete btn btn-danger" %>
+            </div>
+          </div>
   </div>
