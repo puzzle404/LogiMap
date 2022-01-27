@@ -1,9 +1,8 @@
-<div class="contaienr">
-<h1>Update your Truck</h1>
+<div class="container mt-5">
+<h1><strong>Update your Truck</strong></h1>
 </div>
 
-<div class="container mt-5">
-<h2>Nuevo Camión</h2>
+<div class="container mt-4">
 <%= simple_form_for(@truck) do |f| %>
         <%= f.input :brand, value: @truck.brand %>
         <%= f.input :model, value: @truck.model %>

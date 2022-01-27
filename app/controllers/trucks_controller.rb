@@ -33,6 +33,9 @@ class TrucksController < ApplicationController
   end
 
   def update
+    @truck = Truck.find(params[:id])
+    @truck.update(truck_params)
+    redirect_to truck_path(@truck)
   end
 
   private
