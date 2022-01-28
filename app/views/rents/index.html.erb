@@ -1,0 +1,27 @@
+<div class="container text-center mt-5">
+<h2><strong>My Rentals</strong></h2>
+</div>
+
+
+
+
+<div class="container-rents mt-5">
+<% @rents.each do |rent| %>
+<div class="card-juan mb-5 mx-auto" style="max-width: 540px;">
+   <div class="row no-gutters">
+    <div class="col-md-6">
+     <%= cl_image_tag rent.truck.photo.key, height: 330, width: 400, crop: :fill, :quality=>70, class: "img-fluid rounded-start" %>
+
+    </div>
+    <div class="col-md-6">
+      <div class="card-body">
+        <h5 class="card-title"><p><strong><%= rent.truck.brand %></strong></p></h5>
+        <p class="card-text"><p><strong>Starting date:</strong> <%= rent.start_date %></p></p>
+        <p class="card-text"><p><strong>Ending date:</strong> <%= rent.end_date %></p></p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+</div>
