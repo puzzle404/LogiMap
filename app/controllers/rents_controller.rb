@@ -26,6 +26,10 @@ class RentsController < ApplicationController
     end
   end
 
+  def index
+      @rents = policy_scope(Rent).where(user_id: current_user)
+  end
+
   private
 
   def rent_params

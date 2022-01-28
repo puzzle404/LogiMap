@@ -4,16 +4,13 @@
   </div>
 </div>
 
-  <div class="boton mt-4 botones-rentupdate">
+  <div class="boton-rent mt-5 botones-rentupdate">
   <% if @truck.user != current_user %>
     <%= link_to "Rent Truck",  new_truck_rent_path(@truck), class: "btn btn-primary" %>
     <% end %>
-      <% if policy(@truck).update? %>
-      <%= link_to "Update", edit_truck_path(@truck), class:"btn btn-info" %>
-      <% end %>
   </div>
 
-  <div class="card1 mb-4 mt-3 container text-center" style = "width: 400px">
+  <div class="card12 mb-4 mt-3 container text-center" style = "width: 400px">
     <div class="card-body " >
       <h3 class="card-title"> <strong><%= @truck.brand %></strong></h3>
       <p class="card-text">Year: <%= @truck.model %></p>
@@ -22,7 +19,10 @@
       <p class="card-text">Daily Price: $<%= @truck.price %></p>
       <div class="delete">
       <% if policy(@truck).destroy? %>
-      <%= link_to "Delete", delete_truck_path(@truck), method: :delete, data: {confirm: 'Are you sure?'}, class:"delete btn btn-danger" %>
+      <%= link_to "Delete", delete_truck_path(@truck), method: :delete, data: {confirm: 'Are you sure?'}, class:"delete btn btn-danger mr-3" %>
+      <% end %>
+      <% if policy(@truck).update? %>
+      <%= link_to "Update", edit_truck_path(@truck), class:"btn btn-info" %>
       <% end %>
       </div>
     </div>

@@ -6,7 +6,6 @@
 </div>
 
 
-
 <div class="card-group mt-4 container">
 <%# Esta es la card  %>
   <% @trucks.each do |truck| %>
@@ -15,7 +14,7 @@
         <div class="div-img">
           <%= cl_image_tag truck.photo.key, height: 250, width: 350, crop: :fill, :quality=>70 %>
         </div>
-          <div class="card-body">
+          <div class="card-body" style="width: 350px">
           <%# Este es el titulo de la película  %>
             <h5 class="card-title"> <strong><%= truck.brand %></strong></h5>
             <%# Este es el overview de la película  %>
